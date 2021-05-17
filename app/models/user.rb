@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has many :pst_images, dependent: :destroy
+  has_many :pst_images, dependent: :destroy
 end
