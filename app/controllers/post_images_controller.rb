@@ -1,4 +1,5 @@
 class PostImagesController < ApplicationController
+  
   def new
     @post_image = PostImage.new #PostImageモデルの中に新しいものオブジェクトを作成する。
   end
