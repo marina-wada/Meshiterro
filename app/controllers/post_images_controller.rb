@@ -1,5 +1,5 @@
 class PostImagesController < ApplicationController
-  
+
   def new
     @post_image = PostImage.new #PostImageモデルの中に新しいものオブジェクトを作成する。
   end
@@ -17,9 +17,13 @@ class PostImagesController < ApplicationController
   end
 
   def show
+    @post_image = PostImage.find(params[:id])
   end
 
   def destroy
+    @post_image = PostImage.find(params[:id])
+    @post_image.destroy
+    redirect_to post_images_path
   end
 
   # 投稿データのストロングパラメータ
